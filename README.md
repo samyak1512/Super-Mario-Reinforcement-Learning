@@ -10,8 +10,10 @@ Before training the agent, the game environment is wrapped in several custom wra
 ![super mario consecutinve](https://user-images.githubusercontent.com/43640144/225731887-42d6a1d7-6eef-481f-8826-c0038fdb24fd.png)
 
 After the environment is fully preprocessed, it is wrapped with the JoypadSpace wrapper to simplify the controls. This wrapper maps the available actions in the environment to a smaller set of actions that are easier for the agent to learn. The DummyVecEnv wrapper is used to vectorize the environment for parallel execution. This can help speed up training by allowing the agent to process multiple observations at once. The VecFrameStack wrapper is used again to stack frames in the vectorized environment.
+![Screenshot 2023-03-17 005909](https://user-images.githubusercontent.com/43640144/225732590-da128478-ede6-4f68-99b1-a4d39e25312b.png)
 
 The code defines a custom TrainAndLoggingCallback class that inherits from the BaseCallback class of Stable Baselines 3. This callback saves the trained model every check_freq number of training steps in the specified directory. This can be useful for resuming training later or for testing the trained model on new data.
+
 
 Finally, the code trains the agent using the PPO algorithm and logs the progress using the TrainAndLoggingCallback class. After training, the agent is ready to play Super Mario Bros using the learned policy. The policy is essentially a mapping from observations to actions that the agent has learned during training. The policy can be used to play the game autonomously or to control the agent in a human-in-the-loop setting. Overall, this code provides a useful example of how RL can be used to train agents for complex tasks like playing video games.
 
