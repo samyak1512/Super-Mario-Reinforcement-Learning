@@ -12,3 +12,7 @@ After the environment is fully preprocessed, it is wrapped with the JoypadSpace 
 The code defines a custom TrainAndLoggingCallback class that inherits from the BaseCallback class of Stable Baselines 3. This callback saves the trained model every check_freq number of training steps in the specified directory. This can be useful for resuming training later or for testing the trained model on new data.
 
 Finally, the code trains the agent using the PPO algorithm and logs the progress using the TrainAndLoggingCallback class. After training, the agent is ready to play Super Mario Bros using the learned policy. The policy is essentially a mapping from observations to actions that the agent has learned during training. The policy can be used to play the game autonomously or to control the agent in a human-in-the-loop setting. Overall, this code provides a useful example of how RL can be used to train agents for complex tasks like playing video games.
+
+https://user-images.githubusercontent.com/43640144/225727366-4628e954-655a-46c6-8ccc-4d6ca7f773be.mp4
+
+
